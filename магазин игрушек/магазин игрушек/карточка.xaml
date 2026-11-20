@@ -1,0 +1,120 @@
+﻿<Window x:Class="магазин_игрушек.карточка"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:магазин_игрушек"
+        mc:Ignorable="d"
+        Icon="иконка.png" 
+        ResizeMode="NoResize"
+        Title="карточка" Height="600" Width="800">
+    <Grid Background="#FFF4E1E1">
+        <Menu Height="30" VerticalAlignment="Top" Background="White"/>
+
+        <Button Content="⬅"
+           Panel.ZIndex="10"
+           HorizontalAlignment="Left" VerticalAlignment="Top"
+           Height="30" Width="40"
+           FontSize="16"
+           BorderThickness="0"
+           FontFamily="Cambria"
+           Background="White"
+           Foreground="Black"
+           Click="Button_Click"/>
+
+        <Button Content="➕" HorizontalAlignment="Left"
+            Margin="82,481,0,0" VerticalAlignment="Top"
+            Height="40" Width="50" FontSize="18"
+            BorderBrush="#FFDBB2EA" BorderThickness="2"
+            FontFamily="Cambria" Background="{x:Null}" Click="добавить"/>
+
+        <Button Content="Добавить в корзину" HorizontalAlignment="Left"
+            Margin="137,481,0,0" VerticalAlignment="Top"
+            Height="40" Width="186" FontSize="16"
+            BorderBrush="#FFDBB2EA" BorderThickness="2"
+            FontFamily="Cambria" Background="{x:Null}" Click="добавить_в_корзину"/>
+
+        <Button Content="➖" HorizontalAlignment="Left"
+           Margin="328,481,0,0" VerticalAlignment="Top"
+           Height="40" Width="50" FontSize="18"
+           BorderBrush="#FFDBB2EA" BorderThickness="2"
+           FontFamily="Cambria" Background="{x:Null}" Click="убрать"/>
+
+        <!--ТОВАР-->
+        <Image 
+            VerticalAlignment="Top" Height="338" Margin="40,90,380,0"
+           />
+
+        <Label Content="Описание:" HorizontalAlignment="Left" 
+           Margin="434,55,0,0" VerticalAlignment="Top"
+           FontSize="16" 
+           FontFamily="Cambria" />
+
+        <TextBlock HorizontalAlignment="Left" Margin="434,90,0,0" 
+           TextWrapping="Wrap" Text="" VerticalAlignment="Top" 
+           Width="355"  FontSize="16" 
+           FontFamily="Cambria" Height="103"/>
+
+        <!--производитель-->
+        <Label Content="Производитель:" HorizontalAlignment="Left" 
+           Margin="430,200,0,0" VerticalAlignment="Top"
+           FontSize="16" 
+           FontFamily="Cambria"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="555,205,0,0" 
+           TextWrapping="Wrap" Text="" VerticalAlignment="Top" 
+           Width="200"  FontSize="16" 
+           FontFamily="Cambria" Height="20"/>
+
+        <!--наполнитель-->
+        <Label Content="Наполнитель:" HorizontalAlignment="Left" 
+           Margin="430,230,0,0" VerticalAlignment="Top"
+           FontSize="16" 
+           FontFamily="Cambria"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="555,235,0,0" 
+           TextWrapping="Wrap" Text="" VerticalAlignment="Top" 
+           Width="200"  FontSize="16" 
+           FontFamily="Cambria" Height="20"/>
+
+        <!--материал-->
+        <Label Content="Материал:" HorizontalAlignment="Left" 
+           Margin="430,260,0,0" VerticalAlignment="Top"
+           FontSize="16" 
+           FontFamily="Cambria"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="555,265,0,0" 
+           TextWrapping="Wrap" Text="" VerticalAlignment="Top" 
+           Width="200"  FontSize="16" 
+           FontFamily="Cambria" Height="20"/>
+
+        <!--КОЛИЧЕСТВО-->
+        <Label Content="Количество:" HorizontalAlignment="Left" 
+           Margin="430,290,0,0" VerticalAlignment="Top"
+           FontSize="16" 
+           FontFamily="Cambria"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="555,295,0,0" 
+           TextWrapping="Wrap" Text="" VerticalAlignment="Top" 
+           Width="200"  FontSize="16" 
+           FontFamily="Cambria" Height="20"/>
+
+        <!--Название-->
+        <Label Content="" HorizontalAlignment="Left"
+           Margin="98,56,0,0" VerticalAlignment="Top"
+           FontSize="16" 
+           FontFamily="Cambria" Width="264" />
+
+        <!--сколько купили-->
+        <Label Content="" HorizontalAlignment="Left"
+           Margin="263,447,0,0" VerticalAlignment="Top"
+           FontSize="16" 
+           FontFamily="Cambria" Width="60" />
+
+        <!--стоимость (цена*колво)-->
+        <Label Content="" HorizontalAlignment="Left"
+           Margin="137,447,0,0" VerticalAlignment="Top"
+           FontSize="16" 
+           FontFamily="Cambria" Width="126" />
+    </Grid>
+</Window>

@@ -1,0 +1,89 @@
+﻿<Window x:Class="магазин_игрушек.корзина"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:магазин_игрушек"
+        mc:Ignorable="d"
+                Icon="иконка.png" 
+        ResizeMode="NoResize"
+        Title="корзина" Height="600" Width="800">
+    <Grid Background="#FFF4E1E1">
+        <Menu Height="30" VerticalAlignment="Top" Background="White"/>
+
+        <Button Content="⬅"
+           Panel.ZIndex="10"
+           HorizontalAlignment="Left" VerticalAlignment="Top"
+           Height="30" Width="40"
+           FontSize="16"
+           BorderThickness="0"
+           FontFamily="Cambria"
+           Background="White"
+           Foreground="Black"
+           Click="Button_Click"/>
+
+        <DataGrid x:Name="CartGrid"
+           Margin="0,35,0,107"
+           FontFamily="Cambria"
+           FontSize="14"
+           AutoGenerateColumns="False"
+           CanUserAddRows="False"
+           CanUserDeleteRows="False"
+           IsReadOnly="True"
+           HeadersVisibility="Column"
+           Background="White"
+           RowBackground="White"
+           AlternatingRowBackground="#FFF9F0F5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название"    Binding="{Binding Name}"       Width="*"/>
+                <DataGridTextColumn Header="Цена"        Binding="{Binding Price}"      Width="120"/>
+                <DataGridTextColumn Header="Количество"  Binding="{Binding Kolichestvo}" Width="100"/>
+                <DataGridTextColumn Header="Сумма"       Binding="{Binding Summa}"      Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Купить" HorizontalAlignment="Center" 
+           Margin="0,515,0,0" VerticalAlignment="Top"
+           Height="40" Width="184" 
+           FontSize="16" 
+           BorderBrush="#FFDBB2EA"
+           BorderThickness="2"
+           FontFamily="Cambria"
+           Background="{x:Null}" Click="добавить_в_корзину"/>
+
+        <Button Content="➖" 
+           Margin="497,515,244,0" VerticalAlignment="Top"
+           Height="40" 
+           FontSize="16" 
+           BorderBrush="#FFDBB2EA"
+           BorderThickness="2"
+           FontFamily="Cambria"
+           Background="{x:Null}" Click="убрать"/>
+
+        <Button Content="➕" HorizontalAlignment="Left" 
+           Margin="223,515,0,0" VerticalAlignment="Top"
+           Height="40" Width="60" 
+           FontSize="16" 
+           BorderBrush="#FFDBB2EA"
+           BorderThickness="2"
+           FontFamily="Cambria"
+           Background="{x:Null}" Click="добавить"/>
+
+        <Label Content="Итог:" HorizontalAlignment="Left" 
+            Margin="625,482,0,0" VerticalAlignment="Top"
+            FontSize="16"
+            FontFamily="Cambria"/>
+
+        <TextBox x:Name="TotalBox"
+           HorizontalAlignment="Left" Margin="674,485,0,0" 
+           TextWrapping="Wrap" Text="" VerticalAlignment="Top" 
+           Width="120" FontSize="16"
+           FontFamily="Cambria"
+           Background="{x:Null}"
+           BorderThickness="0"
+           IsReadOnly="True"/>
+
+        <Label x:Name="FioLabel" Content="" Margin="420,1,0,549"
+           FontSize="16" FontFamily="Cambria" />
+    </Grid>
+</Window>
